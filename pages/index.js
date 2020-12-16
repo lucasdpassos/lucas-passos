@@ -13,6 +13,7 @@ export default function Home() {
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
       <NavBarP>Lucas Passos - Software Engineering</NavBarP>
+      <Line2 />
     </NavBar1>
     <HeroContainer>
             <HeroBg>
@@ -28,11 +29,11 @@ export default function Home() {
 
         <WhoContainer>
             <WhoBg>
-                <WhoimgBg src="/lucas2.jpeg" />
+               
             </WhoBg>
             <WhoContent>
                 <WhoH1>Who am i ?</WhoH1>
-                <Logo1 src='./session1.svg' />
+                <Avatar src="/avatar1.jpg" />
                 <WhoP>                    
                Lucas Passos, 27 years old software engineer, passionate about data structure, applied mathematics and behavior of algorithms, expert in what concerns the modern javascript stacks, statistics/probability and database. With certifications valid worldwide and working experience in projects from Brazil, Canada and New Zealand
                 </WhoP>               
@@ -141,6 +142,15 @@ export const Logo1 = styled.img`
   
 
 `
+export const Avatar = styled.img`  
+  width: 150px;
+  height: 150px;  
+  background-position: top center;
+  border-radius: 50%;
+
+  
+
+`
 export const Logo2 = styled.img`
   width:130px;
   max-height:130px;
@@ -151,6 +161,20 @@ export const Logo2 = styled.img`
   }
 
 `
+export const Line1 = styled.div`
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid #ff314b;
+    position: absolute;
+
+`
+export const Line2 = styled.div`
+    width: 112px;
+    height: 100px;
+    border-bottom: 1px solid #ff314b;
+    position: absolute;
+
+`
 
 export const NavBarP = styled.p`    
   position: absolute;
@@ -159,6 +183,7 @@ export const NavBarP = styled.p`
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
   color: azure;
+  border-bottom: 1px solid #ff314b;
   @media screen and (max-width: 760px) {
     font-size: 25px;
 }
@@ -528,6 +553,11 @@ export const BookButton = styled.button`
       left:3%;
       
   }
+
+  :hover {
+    border: 1px solid #ff314b;
+    cursor: pointer;
+  }
   
 
 `
@@ -537,7 +567,7 @@ export const BookButtonP = styled.p`
     text-transform: uppercase;
     font-size: 12px;
     text-align: center;
-    letter-spacing: 14px;
+    letter-spacing: 10px;
 
     @media screen and (max-width: 760px) {
       letter-spacing: 4px;
@@ -662,5 +692,8 @@ export const ContIcon = styled.img`
     max-width: 200px;
     max-height: 70px;
 
+    :hover {
+        border: 1px solid white;
+      }
 `
 
